@@ -42,4 +42,4 @@ all: preprocessing assembler object executable
 	$(CC) $^ -o $@
 
 clean:
-	rm -rf *.pp.c *.asm *.o *.e
+	rm -rf *.pp_c *.asm *.o *.e
