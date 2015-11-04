@@ -1,7 +1,12 @@
 .PHONY: default help preprocessing assembler object executable all clean
 CC = gcc
-SOURCE = calculator.c
-OBJECTS = calculator.o
+
+SOURCE = $(wildcard *.c)
+PREPROCESSED= $(patsubst %.c, %.pp.c, $(SOURCE))
+ASSEMBLER= $(patsubst %.c, %.asm, $(SOURCE))
+OBJECTS = $(patsubst %.c, %.o, $(SOURCE))
+EXECUTABLES = $(patsubst %.c, %.e, $(SOURCE))
+
 default: help
 
 help: 	
@@ -14,13 +19,13 @@ Options:\n\n\
   make all:           build all previous\n\
   make clean:         delete output files"
 
-preprocessing: calculator.pp.c
+preprocessing: $(PREPROCESSED)
 
-assembler: calculator.asm
+assembler: $(ASSEMBLER)
 
-object: calculator.o
+object: $(OBJECTS)
 
-executable: calculator.e
+executable: $(EXECUTABLES)
 
 all: preprocessing assembler object executable
 
