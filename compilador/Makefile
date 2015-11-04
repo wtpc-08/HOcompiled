@@ -2,7 +2,7 @@
 CC = gcc
 
 SOURCE = $(wildcard *.c)
-PREPROCESSED= $(patsubst %.c, %.pp.c, $(SOURCE))
+PREPROCESSED= $(patsubst %.c, %.pp_c, $(SOURCE))
 ASSEMBLER= $(patsubst %.c, %.asm, $(SOURCE))
 OBJECTS = $(patsubst %.c, %.o, $(SOURCE))
 EXECUTABLES = $(patsubst %.c, %.e, $(SOURCE))
@@ -29,7 +29,7 @@ executable: $(EXECUTABLES)
 
 all: preprocessing assembler object executable
 
-%.pp.c: %.c
+%.pp_c: %.c
 	$(CC) -E $^ -o $@ 
 
 %.asm: %.c
