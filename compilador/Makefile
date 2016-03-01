@@ -18,7 +18,7 @@ Options:\n\n\
   make executable:    gcc goes all the way and creates the executable calculator.e\n\
   make all:           build all previous\n\
   make clean:         delete output files\n\
-	make help:          display this help"
+  make help:          display this help"
 
 preprocessing: $(PREPROCESSED)
 

@@ -13,11 +13,11 @@ default: help
 help:
 	@echo "\
 Options:\n\n\
-	make objects:       compiler makes objects for every *.c and *.f90\n\
-	make executable:    compiler makes executable\n\
-	make all:           build all previous\n\
-	make clean:         delete output files\n\
-	make help:          display this help"
+  make objects:       compiler makes objects for every *.c and *.f90\n\
+  make executable:    compiler makes executable\n\
+  make all:           build all previous\n\
+  make clean:         delete output files\n\
+  make help:          display this help"
 
 objects: $(OBJECTS_F)
 
