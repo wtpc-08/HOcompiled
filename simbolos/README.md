@@ -7,4 +7,3 @@ e identificar los símbolos, ejecutando:
 ```
 make object
 ```
-
