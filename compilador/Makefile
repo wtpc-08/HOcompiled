@@ -17,7 +17,8 @@ Options:\n\n\
   make object:        gcc runs up to the creation of the binary object calculator.o\n\
   make executable:    gcc goes all the way and creates the executable calculator.e\n\
   make all:           build all previous\n\
-  make clean:         delete output files"
+  make clean:         delete output files\n\
+	make help:          display this help"
 
 preprocessing: $(PREPROCESSED)
 
@@ -42,4 +43,4 @@ all: preprocessing assembler object executable
 	$(CC) $^ -o $@
 
 clean:
-	rm -rf *.pp_c *.asm *.o *.e
+	rm -rfv $(PREPROCESSED) $(ASSEMBLER) $(OBJECTS) $(EXECUTABLES)
