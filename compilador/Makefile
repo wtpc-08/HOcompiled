@@ -12,7 +12,7 @@ default: help
 help: 	
 	@echo "\
 Options:\n\n\
-  make preprocessing: gcc runs up to pre-processor and stops, creating calculator.pp.c\n\
+  make preprocessing: gcc runs up to pre-processor and stops, creating calculator.pp_c\n\
   make assembler:     gcc runs up to assembler code generation and stops, creating calculator.asm\n\
   make object:        gcc runs up to the creation of the binary object calculator.o\n\
   make executable:    gcc goes all the way and creates the executable calculator.e\n\
